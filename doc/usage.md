@@ -23,7 +23,7 @@ $results = $finder->find('example.net');
 $results = $finder->findHybrid('example.net');
 
 // Option 3a. Pagerfanta'd resultset
-/** var Pagerfanta\Pagerfanta */
+/** @var Pagerfanta\Pagerfanta */
 $userPaginator = $finder->findPaginated('bob');
 $countOfResults = $userPaginator->getNbResults();
 
@@ -90,7 +90,7 @@ fos_elastica:
 You can now use the index wide finder service `fos_elastica.finder.app`:
 
 ```php
-/** var FOS\ElasticaBundle\Finder\MappedFinder */
+/** @var FOS\ElasticaBundle\Finder\MappedFinder */
 $finder = $this->container->get('fos_elastica.finder.app');
 
 // Returns a mixed array of any objects mapped
@@ -116,13 +116,13 @@ fos_elastica:
 An example for using a repository:
 
 ```php
-/** var FOS\ElasticaBundle\Manager\RepositoryManager */
+/** @var FOS\ElasticaBundle\Manager\RepositoryManager */
 $repositoryManager = $this->container->get('fos_elastica.manager');
 
-/** var FOS\ElasticaBundle\Repository */
+/** @var FOS\ElasticaBundle\Repository */
 $repository = $repositoryManager->getRepository('UserBundle:User');
 
-/** var array of Acme\UserBundle\Entity\User */
+/** @var array of Acme\UserBundle\Entity\User */
 $users = $repository->find('bob');
 ```
 
